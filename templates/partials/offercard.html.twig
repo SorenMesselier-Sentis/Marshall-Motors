@@ -1,0 +1,15 @@
+<article class="offer-card">
+    <a href="{{ path('app_offres_show',{id:offer.id}) }}"><img src="{{ offer.image }}" alt="car offer img"></a>
+    {% if showLike %}
+        {% include "partials/modal.html.twig" with {offer:offer} only %}
+    {% endif %}
+    {% if showInfos %}
+    <div class="offer-infos">
+        <div>
+            <p>{{ offer.title }}</p>
+            <p>{{ offer.price }} €</p>
+        </div>
+        <a href="{{ path('app_offres_show', {id:offer.id}) }}" class="red-b">Découvrir l'offre</a>
+    </div>
+    {% endif %}
+</article>

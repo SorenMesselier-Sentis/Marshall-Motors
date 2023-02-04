@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Bap 47 IIM - Digitale School">
+        <meta name="description" content="">
+        <link rel="shortcut icon" href="img/logo.svg">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <script src="https://kit.fontawesome.com/376d785b29.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="/favicon.ico">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+    {% include "partials/nav.html.twig" %}
+    {% include "partials/ariane.html.twig" %}
+    <div id="body-content">
+        {% block body %}{% endblock %}
+    </div>
+    {% include "partials/footer.html.twig" %}
+    </body>
+</html>

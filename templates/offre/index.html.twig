@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos offres | Marshall Motors{% endblock %}
+
+{% block body %}
+<main id="offer-page">
+    <h1>Nos offres de véhicules</h1>
+	<p class="offer-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto delectus, eos exercitationem id impedit, incidunt laborum maiores modi molestias neque nihil optio ratione sunt tempore tenetur? Ab aperiam esse ut. Aliquam amet, atque aut corporis doloribus eligendi enim explicabo id illo inventore iste iure mollitia nisi numquam, odit, perspiciatis quae quam quasi qui quo rem repellat sit vel voluptatem voluptatum.</p>
+	<section>
+		{% for offer in offers %}
+			{% include "partials/offercard.html.twig" with {offer:offer, showInfos:true, showLike:true} only %}
+		{% endfor %}
+	</section>
+    {{ knp_pagination_render(offers) }}
+</main>
+{% endblock %}

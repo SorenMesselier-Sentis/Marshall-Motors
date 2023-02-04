@@ -1,0 +1,128 @@
+/* -------------------------------------------------------------------------- */
+/*                             About Page layaouts                            */
+/* -------------------------------------------------------------------------- */
+main#about-page{
+    
+    /* -------------------------------------------------------------------------- */
+    /*                        Top section of the about page                       */
+    /* -------------------------------------------------------------------------- */
+    .about__top{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+
+        @include responsive_500px{
+            flex-direction: column;
+        }
+
+        @include responsive_1000px{
+            flex-direction: column;
+        }
+
+        .about__texte{
+            display: flex;
+            flex-direction: column;
+            gap: 65px;
+
+            @include responsive_500px{
+                gap: 20px;
+                align-items: center;
+                justify-content: center
+            }
+
+            @include responsive_1000px{
+                gap: 20px;
+                align-items: center;
+                justify-content: center
+            }
+
+            h1{
+                @include Title_h1;
+
+                @include responsive_500px{
+                    font-size: 32px;
+                }
+            }
+
+            p{
+                @include Texte_p;
+                font-weight: 300;
+
+                @include responsive_500px{
+                    text-align: center;
+                    font-size: 16px;
+                }
+
+                @include responsive_1000px{
+                    text-align: center;
+                    width: 80%;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .about__img{
+            width: 80%;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /*                      End top section of the about page                     */
+    /* -------------------------------------------------------------------------- */
+
+    /* -------------------------------------------------------------------------- */
+    /*                         offer section of about page                        */
+    /* -------------------------------------------------------------------------- */
+
+    .about__offer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+
+        h2{
+            @include Title_h2;
+            
+            margin-top: 200px;
+
+            @include responsive_500px{
+                margin-top: 50px;
+                font-size: 32px;
+            }
+            @include responsive_1000px{
+                margin-top: 50px;
+            }
+        }
+
+        .about__offer--content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 154px;
+
+            @include responsive_500px{
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /*                       end offer section of about page                      */
+    /* -------------------------------------------------------------------------- */
+
+}
+
+/* -------------------------------------------------------------------------- */
+/*                          End of about page styles                          */
+/* -------------------------------------------------------------------------- */

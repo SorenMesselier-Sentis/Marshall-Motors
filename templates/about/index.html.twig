@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Notre histoire | Marshall Motors{% endblock %}
+
+{% block body %}
+
+<main id="about-page">
+
+    {# History About Section   #}
+    <div class="about__top">
+
+        <div class="about__texte">
+
+            <h1 class="h1">Histoire</h1>
+
+            <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus vitae, nunc praesent vitae sed massa non. Eget risus, sit vitae mus eget sed ut aliquam maecenas. Sit posuere massa at aliquet amet sed dictum dui. Id hendrerit eleifend rhoncus rhoncus.</p>
+        </div>
+
+        <div class="about__img">
+            <img src="img/about/img1.svg" alt="">
+        </div>
+    </div>
+
+    {# Offer bout section  #}
+
+    <div class="about__offer">
+
+        <h2 class="h2">Nos Offres de véhicules</h2>
+
+        <div class="about__offer--content">
+        {% for last_offer in last_offers %}
+                {% include "partials/offercard.html.twig" with {offer:last_offer, showInfos:false, showLike:true} only %}
+        {% endfor %}
+        </div>
+    </div>
+
+
+</main>
+
+
+{% endblock %}

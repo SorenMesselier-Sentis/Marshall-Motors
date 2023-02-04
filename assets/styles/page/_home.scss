@@ -1,0 +1,310 @@
+/* -------------------------------------------------------------------------- */
+/*                            Section Mes services                            */
+/* -------------------------------------------------------------------------- */
+main#home-page {
+
+  .services{
+    /* Placement */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 67px;
+    gap: 83px;
+    padding-bottom: 100px;
+
+    /* Taille */
+    width: 100%;
+    height: 625px;
+
+    @include responsive_500px {
+      height: 450px;
+    }
+
+    /* background color */
+    background-color: $extremely-bright-grey;
+
+    .services__title{
+      /* Placement */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 69px;
+
+      
+      @include responsive_500px {
+        font-size: 32px;
+      }
+      
+
+      h2{
+
+        @include Title_h2;
+
+        @include responsive_500px {
+          font-size: 32px;
+        }
+
+      }
+
+    }
+
+    .services__logo{
+      /* Placement */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      /* Taille */
+
+      width: 75%;
+      height: auto;
+
+      @include responsive_500px {
+        width: 80%;
+      }
+
+      /* background color */
+      background-color: #fff;
+
+      /* style */
+      border-radius: 5px;
+
+      .cards__icons{
+        /* Placement */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        /* Taille */
+        width: 100%;
+        height: 100%;
+
+        .card {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          width: 100%;
+          padding: 2rem 0;
+
+          svg{
+            width: 70px;
+            height: 70px;
+
+            @include responsive_500px {
+              width: 30px;
+              height: 30px;
+            }
+
+          }
+
+          .card__description{
+            display: none;
+          }
+
+          &:hover{
+            background-color: $yellow;
+            transition: all 0.3s ease-in-out;
+            svg {
+
+              path {
+                fill: $white;
+              }
+            }
+
+            .card__description{
+              position: absolute;
+              top: 110%;
+              left: 0;
+              display: flex;
+              flex-direction: column;
+              gap: 15px;
+
+              h3{
+
+                @include Title_h3;
+
+                @include responsive_500px {
+                  font-size: 14px;
+                }
+
+                
+              }
+
+              p{
+                @include Texte_p;
+
+                @include responsive_500px {
+                  font-size: 14px;
+                }
+
+                font-weight: 300;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*                            Section Mon histoire                            */
+  /* -------------------------------------------------------------------------- */
+
+  .story{
+    /* Placement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 83px;
+
+    /* Taille */
+    width: 100%;
+    height: 624px;
+
+    /* background color */
+    background-color: $white;
+
+    .story__title{
+      /* Placement */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 83px;
+      gap: 6px;
+
+      h2{
+        @include Title_h2;
+
+        @include responsive_500px {
+          font-size: 32px;
+        }
+
+        
+      }
+
+      p{
+        @include Texte_p;
+        font-size: 16px;
+      }
+
+    }
+
+    .story__content{
+      /* Placement */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 40px;
+
+      /* Taille */
+      width: 100%;
+      height: 278px;
+      padding: 1.5rem;
+
+      p{
+        @include Texte_p;
+        
+        font-weight: 500;
+        font-size: 16px;
+
+        @include responsive_500px {
+          font-size: 12px;
+          text-align: center;
+        }
+
+      }
+    }
+
+    .story__autor{
+      /* Placement */
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      /* Taille */
+      width: 100%;
+      padding: 1.5rem;
+
+      @include responsive_500px {
+        justify-content: center;
+      }
+
+      span{
+        @include Texte_p;
+        
+        font-size: 16px;
+        font-weight: 500;
+
+        /* Margin */
+        margin-bottom: 66px;
+      }
+    }
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*                            Sell Galerry section                            */
+  /* -------------------------------------------------------------------------- */
+
+  .sell{
+    /* Placement */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+
+    /* Taille */
+    width: 100%;
+
+    /* background color */
+    background-color: $extremely-bright-grey;
+
+    .sell__title{
+      /* Placement */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px;
+
+      h2{
+        @include Title_h2;
+
+        @include responsive_500px {
+          font-size: 32px;
+        }
+      }
+    }
+
+    .sell__slider{
+      margin-top: 57px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .sell__offer{
+      /* Placement */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      /* Taille */
+      height: 40px;
+
+      /* background color */
+      background-color: $black;
+
+      /* style */
+      border-radius: 5px;
+
+      /* Margin */
+      margin-top: 112px;
+
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<div class="like-popup">
+    <div class="like-btn">
+        <p>J'aime cette annonce</p>
+        <i class="fas fa-heart"></i>
+    </div>
+    <form class="modal">
+        <p>Laissez nous votre email pour être contacté à propos de cette annonce</p>
+        <label for="first_name__last_name">Nom & Prénom</label>
+        <input class="input-like-name" type="text">
+        <label for="email">E-mail</label>
+        <input class="input-like-email" type="email">
+        
+        <input class="input-like-offer" type="hidden" value="{{ offer.id }}">
+        <button class="submit-like-button red-b red-button" type="submit">Envoyer</button>
+    </form>
+</div>
+
+<script src="/js/modal.js"></script>

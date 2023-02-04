@@ -1,0 +1,61 @@
+main#offer-page {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  place-items: center;
+
+  h1 {
+    margin: 5%;
+
+    @include responsive_500px{
+      font-size: 32px;
+    }
+
+    @include responsive_1000px{
+      font-size: 32px;
+    }
+
+  }
+
+  .offer-desc {
+    margin-bottom: 130px;
+    text-align: center;
+    @include montserrat;
+    font-size: 16px;
+    font-weight: 500;
+
+    @include responsive_500px{
+      font-weight: 300;
+      margin-bottom: 80px;
+    }
+
+    @include responsive_1000px{
+      font-weight: 300;
+      margin-bottom: 80px;
+    }
+  }
+
+  .offer-btn {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 115px;
+    max-width: 500px;
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem 2rem;
+  }
+
+  .pagination {
+    @include montserrat;
+    margin: 50px;
+    font-weight: bold;
+    span{
+      padding: 10px;
+    }
+  }
+}

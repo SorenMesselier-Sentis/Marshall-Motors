@@ -1,0 +1,87 @@
+.like-popup {
+  @include montserrat;
+  position: absolute;
+  z-index: 100;
+  right: 1rem;
+  top: 1rem;
+  width: 240px;
+  border-radius: 6px;
+  border: none;
+  background-color: $white;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 1rem 1rem 100px rgba(0, 0, 0, 0.2);
+
+
+  .like-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+
+    & ::selection {
+      background-color: transparent;
+    }
+
+    p {
+      font-weight: bold;
+    }
+
+    > i {
+      color: $red;
+      width: 16px;
+      height: 16px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $extremely-bright-grey;
+      transition-duration: 0.3s;
+    }
+  }
+
+  .modal {
+    height: 0;
+    transition: height 0.5s;
+    overflow: hidden;
+    background: #fefefe;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0 1rem;
+
+    p {
+      font-size: 11px;
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+
+    .red-button {
+      border: none;
+      cursor: pointer;
+      background: $red;
+      color: white;
+      display: block;
+      padding: 0.5rem;
+      margin-top: 1rem;
+      border-radius: 6px;
+      align-self: center;
+      margin-bottom: 0.8rem;
+    }
+
+    label {
+      margin-top: 1rem;
+    }
+
+    input {
+      background: $bright-grey;
+      border-radius: 4px;
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 14px;
+    }
+  }
+}

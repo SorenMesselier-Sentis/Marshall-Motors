@@ -1,0 +1,20 @@
+main#legalnotices-page {
+  padding: 10%;
+
+  p, h3 {
+    font-size: 18px;
+    padding: 2% 0;
+    @include montserrat;
+  }
+  .start{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    .divider{
+      height: 2px;
+      width: 700px;
+      background-color: #54545480;
+      margin-bottom: 100px;
+    }
+  }
+}

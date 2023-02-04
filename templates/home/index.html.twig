@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page d'accueil | Marshall Motors{% endblock %}
+
+{% block body %}
+<main id="home-page">
+
+    {# Heros Section #}
+
+    <div class="hero">
+        <div class="hero__title">
+            <h1>Artisants, Passionnés</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor adipiscing elit est ullamcorper in pulvinar risus sed. A, semper ut varius a consequat faucibus. </p>
+        </div>
+
+        <div class="slider__container" data-autoplay="true">
+            {% for last_offer in last_offers %}
+                <div class="slide">
+                    <img src="{{ asset(last_offer.image) }}" alt="">
+                </div>
+            {% endfor %}
+
+            <button class="prev" ><i class="fa fa-angle-left"></i></button>
+            <button class="next" ><i class="fa fa-angle-right"></i></button>
+        </div>
+        <div class="dots_container" id="indicator"></div>
+    </div>
+
+    {# Section Services  #}
+
+    <section class="services">
+        <div class="services__title">
+            <h2>Mes Services</h2>
+        </div>
+
+        <div class="services__logo">
+            <div class="cards__icons">
+                <div class="card">
+                    <svg width="71" height="57" viewBox="0 0 71 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M56.8 42.75H49.7V39.1875H21.3V42.75H14.2V39.1875H0V57H71V39.1875H56.8V42.75ZM63.9 14.25H53.25V7.125C53.25 3.20625 50.055 0 46.15 0H24.85C20.945 0 17.75 3.20625 17.75 7.125V14.25H7.1C3.195 14.25 0 17.4562 0 21.375V35.625H14.2V28.5H21.3V35.625H49.7V28.5H56.8V35.625H71V21.375C71 17.4562 67.805 14.25 63.9 14.25ZM46.15 14.25H24.85V7.125H46.15V14.25Z" fill="#F4AB28"/>
+                    </svg>
+                    <div class="card__description">
+                        <h3>Maintenance & Entretien </h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus ut viverra tempus pellentesque nunc sed. A ornare lorem in auctor nulla nunc consectetur orci, fermentum. </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <svg width="55" height="63" viewBox="0 0 55 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M52.5 27.5H47.1875V10C47.1875 4.47656 42.7109 0 37.1875 0H17.8125C12.2891 0 7.8125 4.47656 7.8125 10V27.5H2.5C1.11719 27.5 0 28.6172 0 30V60C0 61.3828 1.11719 62.5 2.5 62.5H52.5C53.8828 62.5 55 61.3828 55 60V30C55 28.6172 53.8828 27.5 52.5 27.5ZM29.6875 46.0156V50.1562C29.6875 50.5 29.4062 50.7812 29.0625 50.7812H25.9375C25.5938 50.7812 25.3125 50.5 25.3125 50.1562V46.0156C24.6676 45.5526 24.1863 44.8969 23.9377 44.1429C23.6892 43.3889 23.6863 42.5755 23.9295 41.8198C24.1727 41.0641 24.6495 40.405 25.2911 39.9375C25.9327 39.4699 26.7061 39.218 27.5 39.218C28.2939 39.218 29.0673 39.4699 29.7089 39.9375C30.3505 40.405 30.8273 41.0641 31.0705 41.8198C31.3137 42.5755 31.3108 43.3889 31.0623 44.1429C30.8137 44.8969 30.3324 45.5526 29.6875 46.0156ZM41.5625 27.5H13.4375V10C13.4375 7.58594 15.3984 5.625 17.8125 5.625H37.1875C39.6016 5.625 41.5625 7.58594 41.5625 10V27.5Z" fill="#F4AB28"/>
+                    </svg>
+                    <div class="card__description">
+                        <h3>jolo </h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus ut viverra tempus pellentesque nunc sed. A ornare lorem in auctor nulla nunc consectetur orci, fermentum. </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <svg width="80" height="71" viewBox="0 0 80 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M74.2564 36.1658L80 42.1651L53.2103 70.2042L38.9744 55.3124L44.7179 49.3131L53.2103 58.1631L74.2564 36.1658ZM28.718 55.3124L41.0256 68.0768H0V59.5672C0 50.1641 14.6872 42.548 32.8205 42.548L40.5744 43.016L28.718 55.3124ZM32.8205 0C37.1728 0 41.3468 1.79309 44.4243 4.98481C47.5018 8.17653 49.2308 12.5054 49.2308 17.0192C49.2308 21.533 47.5018 25.8619 44.4243 29.0536C41.3468 32.2453 37.1728 34.0384 32.8205 34.0384C28.4682 34.0384 24.2942 32.2453 21.2167 29.0536C18.1392 25.8619 16.4103 21.533 16.4103 17.0192C16.4103 12.5054 18.1392 8.17653 21.2167 4.98481C24.2942 1.79309 28.4682 0 32.8205 0Z" fill="#F4AB28"/>
+                    </svg>
+                    <div class="card__description">
+                        <h3>bolo </h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus ut viverra tempus pellentesque nunc sed. A ornare lorem in auctor nulla nunc consectetur orci, fermentum. </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.10819 53.06C2.33963 54.0653 2.83133 54.9921 3.53398 55.7474C4.23663 56.5027 5.12553 57.06 6.11153 57.3633L6.71153 60H6.66153V66.6667H59.9949V60H15.6049C15.6486 59.692 15.6407 59.3788 15.5815 59.0733L14.9282 56.1967L49.4515 48.3433L50.1049 51.22C50.2789 51.9832 50.7488 52.6461 51.4114 53.063C52.0739 53.4798 52.8748 53.6167 53.6382 53.4433L56.5149 52.7867C56.893 52.7009 57.2505 52.5414 57.5669 52.3173C57.8833 52.0933 58.1525 51.8091 58.359 51.4809C58.5655 51.1527 58.7052 50.7871 58.7703 50.4049C58.8354 50.0226 58.8245 49.6313 58.7382 49.2533L57.9015 45.5767C59.3882 44.19 60.1349 42.09 59.6515 39.9667L57.6849 31.3333C57.4462 30.2932 56.9284 29.3379 56.1872 28.5702C55.4459 27.8026 54.5093 27.2516 53.4782 26.9767L46.6482 15.7167C45.641 14.0623 44.1398 12.766 42.3563 12.0106C40.5728 11.2552 38.5972 11.079 36.7082 11.5067L10.4815 17.4733C8.59047 17.9017 6.88234 18.9147 5.59952 20.3687C4.31669 21.8226 3.52433 23.6436 3.33486 25.5733L2.04486 38.68C1.23576 39.3747 0.631322 40.2769 0.296552 41.2894C-0.0382186 42.3019 -0.0906621 43.3866 0.14486 44.4267L2.10819 53.06ZM12.1749 50.7667C11.6082 50.8958 11.0217 50.9121 10.4487 50.8145C9.87579 50.717 9.32768 50.5075 8.83568 50.1982C8.34369 49.8888 7.91744 49.4855 7.58129 49.0114C7.24514 48.5373 7.00566 48.0017 6.87653 47.435C6.74739 46.8683 6.73113 46.2818 6.82868 45.7089C6.92623 45.1359 7.13566 44.5878 7.44504 44.0958C7.75441 43.6038 8.15766 43.1776 8.63176 42.8414C9.10587 42.5053 9.64154 42.2658 10.2082 42.1367C11.3526 41.8759 12.5537 42.0804 13.5474 42.7052C14.541 43.33 15.2457 44.3239 15.5065 45.4683C15.7673 46.6127 15.5628 47.8139 14.938 48.8075C14.3132 49.8011 13.3193 50.5059 12.1749 50.7667ZM49.5815 42.26C49.0052 42.4184 48.4027 42.4585 47.8105 42.3778C47.2182 42.2971 46.6485 42.0973 46.1355 41.7904C45.6226 41.4835 45.1771 41.0759 44.826 40.5922C44.4748 40.1085 44.2253 39.5587 44.0924 38.9759C43.9595 38.3932 43.946 37.7896 44.0527 37.2014C44.1594 36.6133 44.3841 36.0529 44.7132 35.554C45.0424 35.055 45.4692 34.6279 45.9679 34.2984C46.4666 33.9689 47.0268 33.7438 47.6149 33.6367C48.7367 33.4323 49.8941 33.6687 50.8459 34.2967C51.7977 34.9246 52.4705 35.8956 52.7241 37.0074C52.9776 38.1191 52.7924 39.2858 52.2069 40.2644C51.6215 41.2429 50.681 41.9578 49.5815 42.26ZM11.9582 23.9733L38.1882 18.0033C38.7138 17.8846 39.2634 17.9336 39.7597 18.1435C40.2559 18.3533 40.6739 18.7135 40.9549 19.1733L46.2382 27.8833L44.3515 28.3133L10.8649 35.9367L8.97153 36.3667L9.96819 26.2267C10.0218 25.6899 10.2428 25.1835 10.5999 24.7792C10.957 24.3748 11.4322 24.0929 11.9582 23.9733ZM54.6782 6.66667L49.9949 0L48.3282 10L56.6615 23.3333L66.6615 26.6667L59.9949 18.2033L66.6615 15.0933L59.9949 11.9833L66.6615 0L54.6782 6.66667Z" fill="#F4AB28"/>
+                    </svg>
+                    <div class="card__description">
+                        <h3>Rolent bolo</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus ut viverra tempus pellentesque nunc sed. A ornare lorem in auctor nulla nunc consectetur orci, fermentum. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# Section Story #}
+
+    <section class="story">
+
+        <div class="story__title">
+            <h2>Mon Histoire</h2>
+            <p>Marshall Motors</p>
+        </div>
+
+        <div class="story__content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus ut viverra tempus pellentesque nunc sed. A ornare lorem in auctor nulla nunc consectetur orci, fermentum. </p>
+            <p>Blandit felis, ut ornare amet volutpat lectus. Volutpat nisl nec ultrices est semper massa vitae elit tortor. Neque, quis rhoncus venenatis egestas ipsum ut etiam facilisi ut. Ipsum sagittis sit bibendum dignissim pellentesque consequat. Eget netus lectus ornare commodo mi turpis scelerisque ullamcorper. Eleifend imperdiet proin gravida nibh ac elementum, quis consequat arcu. Pellentesque tempus vel quam viverra ullamcorper scelerisque enim.</p>
+        </div>
+
+        <div class="story__autor">
+            <span>@auther</span>
+        </div>
+    </section>
+
+    {# sell section  #}
+
+    <section class="sell">
+        <div class="sell__title">
+            <h2>Nos dernières offres</h2>
+        </div>
+
+        <div class="sell__slider">
+            {% for last_offer in last_offers %}
+                {% include "partials/offercard.html.twig" with {offer:last_offer, showInfos:false, showLike:false} only %}
+            {% endfor %}
+        </div>
+
+        <span class="sell__offer">
+            <a href="{{ path('app_offres') }}" class="black-b">Voir Toutes nos offres</a>
+        </span>
+    </section>
+</main>
+<script src="/js/slider.js"></script>
+{% endblock %}

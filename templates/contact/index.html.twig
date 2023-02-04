@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contactez-nous | Marshall Motors{% endblock %}
+
+{% block body %}
+<main id="contact-page">
+    <section class="contact-dispo">
+        <div class="contact-form">
+
+            <h1>Contactez-nous</h1>
+            {{ form_start(contactForm) }}
+                {{ form_row(contactForm.name) }}
+                {{ form_row(contactForm.email) }}
+                {{ form_row(contactForm.phone) }}
+                {{ form_row(contactForm.message) }}
+            {{ form_end(contactForm) }}
+
+        </div>
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2654.2472408069734!2d-0.5614364851348661!3d48.298096147947525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4809a4681be8075b%3A0x61862af7a3f26f6a!2s13%20Rue%20de%20Normandie%2C%2053440%20Aron!5e0!3m2!1sfr!2sfr!4v1650376966850!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </section>
+</main>
+{% endblock %}

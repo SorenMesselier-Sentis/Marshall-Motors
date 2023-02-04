@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Produit | Marshall Motors
+{% endblock %}
+
+{% block body %}
+	<main id="productPage">
+		<article>
+			<div class="product">
+				<div class="product-images">
+					<div class="first-product">
+						{% include "partials/offercard.html.twig" with {offer:offer, showInfos:false, showLike:true} only %}
+					</div>
+					<div class="low-product">
+						{% if offer.image2 %}
+							<img src="{{ offer.image2 }}" alt="product details">
+						{% endif %}
+						{% if offer.image3 %}
+							<img src="{{ offer.image3 }}" alt="product details">
+						{% endif %}
+					</div>
+				</div>
+				<div class="product-desc">
+					<h3>{{ offer.title }}</h3>
+					<p>{{ offer.description }}</p>
+					{% if offer.url %}
+						<a href="{{ offer.url }}" class="red-b">Découvrir l'offre</a>
+					{% endif %}
+				</div>
+			</div>
+		</article>
+	</main>
+{% endblock %}

@@ -1,0 +1,153 @@
+/* -------------------------------------------------------------------------- */
+/*                               Global div hero                              */
+/* -------------------------------------------------------------------------- */
+main#home-page {
+
+    .hero {
+        /* -------------------------------------------------------------------------- */
+        /*                                  Top title                                 */
+        /* -------------------------------------------------------------------------- */
+        .hero__title {
+            /* Placement */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 50px;
+            gap: 30px;
+
+            
+            
+            
+            h1{
+                @include Title_h1;
+
+                @include responsive_700px {
+                    font-size: 32px;
+                }
+
+                @include responsive_500px {
+                    font-size: 32px;
+                }
+            }
+
+            p{
+                /* taille */
+                width: 668px;
+
+                @include Texte_p;
+
+                @include responsive_700px {
+                    width: 80%;
+                    text-align: center;
+                }
+
+                @include responsive_500px {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                font-weight: 300;
+                font-size: 16px;
+
+                /* Margin */
+                margin-bottom: 30px;
+            }
+        }
+
+        /* -------------------------------------------------------------------------- */
+        /*                                End Top Title                               */
+        /* -------------------------------------------------------------------------- */
+
+        /* -------------------------------------------------------------------------- */
+        /*                                Slider style                                */
+        /* -------------------------------------------------------------------------- */
+
+        .slider__container {
+            position: relative;
+            width: 70%;
+            height: 400px;
+            margin: 20px auto;
+
+            @include responsive_500px {
+                height: 200px;
+            }
+            
+
+            .slide {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 400px;
+                opacity: 0;
+                transition: 1s ease-in-out;
+                overflow: hidden;
+
+                @include responsive_500px {
+                    height: 200px;
+                }
+
+                
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            button {
+                border: none;
+                background: none;
+                font-size: 24px;
+                cursor: pointer;
+
+                
+            }
+
+            .prev {
+                position: absolute;
+                top: 50%;
+                left: -50px;
+                z-index: 10;
+
+            }
+
+            .next {
+                position: absolute;
+                top: 50%;
+                right: -50px;
+                z-index: 10;
+            }
+        }
+
+        .dots_container {
+            display: flex;
+            margin: 5px auto;
+            width: fit-content;
+
+            @include responsive_500px {
+                    
+            }
+            
+        }
+
+        .dots {
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background: $black;
+            margin: 4px;
+
+            &:hover {
+                background: $red;
+            }
+        }
+
+        /* -------------------------------------------------------------------------- */
+        /*                              End slider style                              */
+        /* -------------------------------------------------------------------------- */
+    }
+}
+
